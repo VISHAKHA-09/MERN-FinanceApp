@@ -1,13 +1,13 @@
 // LoginPage.js
-import { useCallback, useEffect, useState } from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+import "react-toastify/dist/React-Toastify.css";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import { loginAPI } from "../../utils/ApiRequest";
 
 const Login = () => {

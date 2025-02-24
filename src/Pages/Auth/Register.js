@@ -1,15 +1,15 @@
 // SignupPage.js
-import { useCallback, useEffect, useState } from "react";
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import "./auth.css";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import axios from "axios";
+import { useCallback, useEffect, useState } from "react";
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/React-run-toastify.css';
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import { registerAPI } from "../../utils/ApiRequest";
-import axios from "axios";
+import "./auth.css";
 
 const Register = () => {
 
@@ -59,7 +59,6 @@ const Register = () => {
       const {name, email, password} = values;
 
       setLoading(false);
-     
       const {data} = await axios.post(registerAPI, {
         name,
         email,
